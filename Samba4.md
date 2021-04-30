@@ -19,17 +19,17 @@
 > gateway 192.168.0.1
 
 * Outros comandos úteis para debug:
-> ifdown <nome eth> (derruba a eth)/
-> ifup <nome eth>   (sobe a eth)/
-> ip link show/
-> ip -s link show <nome eth>/
-> apt install ethtool (utilitário)/
-> ip neigh show/
-> ip -br address show/
-> traceroute google.com/
-> ip route show/
-> nslookup google.com/
-> ss -tunlp4/
+> ifdown <nome eth> (derruba a eth)<br/>
+> ifup <nome eth>   (sobe a eth)<br/>
+> ip link show<br/>
+> ip -s link show <nome eth><br/>
+> apt install ethtool (utilitário)<br/>
+> ip neigh show<br/>
+> ip -br address show<br/>
+> traceroute google.com<br/>
+> ip route show<br/>
+> nslookup google.com<br/>
+> ss -tunlp4<br/>
 		
 ## Instalação das dependências do Samba:
 sudo apt install acl attr autoconf bind9utils bison build-essential debhelper /
