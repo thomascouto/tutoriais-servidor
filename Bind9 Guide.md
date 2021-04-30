@@ -14,7 +14,7 @@
   %sudo   ALL=(ALL:ALL) ALL
 4. Reboot
 ```
-* **NOTA**: Ou então editar /etc/sudoers.d/<<username>>
+* **NOTA**: Ou então editar /etc/sudoers.d/<< username >>
 
 #### Download/Compilação do pacote BIND:
 * De acordo com o o [Wiki](http://wiki.samba.org/index.php/Using_BIND_DLZ_backend_with_secured_/_signed_DNS_updates) do Samba,
@@ -53,8 +53,8 @@
 	   os que não foram definidos, o named assume a localização padrão. Inicialmente vamos criar o usuário/grupo named eefetuar 
 	   a configuração do 'named.conf', que neste caso estará no /etc/bind/named.conf.
 	9. Será necessário criar um usuário para o processo, que neste caso o chamaremos de named.
-	10. group add -g <<gid>> named (poderá também ser criado apenas com group add named, ou então com -f (--force), consultar documentação. 
-	11. useradd -u <<uid>> -g named -d /var/named -M -s /sbin/nologin named
+	10. group add -g << gid >> named (poderá também ser criado apenas com group add named, ou então com -f (--force), consultar documentação. 
+	11. useradd -u << uid >> -g named -d /var/named -M -s /sbin/nologin named
 	12. nano /etc/bind/named.conf (ajustar para o seu path)
 	13. 
 		#### Global Configuration Options
