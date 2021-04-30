@@ -29,8 +29,8 @@
 	3. cd bind-9-16.13
 	4. As **dependencias** necessárias para compilar o BIND9 são:
 		```
-		sudo apt install devscripts build-essential libkrb5-dev debhelper libssl-dev libtool bison libdb-dev / 
-		libldap2-dev libxml2-dev libpcap-dev libgeoip-dev dpkg-dev pkg-config python-ply python3-ply libmaxminddb-dev /
+		sudo apt install devscripts build-essential libkrb5-dev debhelper libssl-dev libtool bison libdb-dev \ 
+		libldap2-dev libxml2-dev libpcap-dev libgeoip-dev dpkg-dev pkg-config python-ply python3-ply libmaxminddb-dev \
 		libuv1-dev libcap-dev
 		```
 	NOTA 1: Verificar se todas foram instaladas sem erro após o 'apt install'<br/>
