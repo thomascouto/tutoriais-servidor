@@ -23,7 +23,9 @@
 	bind instalado por repositório não possui todas as opções necessárias para o correto funcionamento do samba.
 * Para correção deste problema, é necessário efetuar o download/compilar o pacote BIND9 do ISC (https://www.isc.org/download/). 
 * Caso você já possua o BIND9 instalado, remove-lo. (apt purge / autoremove)
-* Neste guia, a versão instalada foi a 9.16.13 (https://downloads.isc.org/isc/bind9/9.16.13/bind-9.16.13.tar.xz)
+* Neste guia, a versão instalada foi a 9.16.13 (https://downloads.isc.org/isc/bind9/9.16.13/bind-9.16.13.tar.xz), sendo a última disponível.
+* A versão 9.16.15 foi lançada, realizei o update normalmente.
+* Atenção: A versão 9.17.xx está em fase de **DESENVOLVIMENTO**, não deverá ser usada em produção. A mesma ainda está sem diversas opções necessárias para o correto funcionamento do DLZ do samba, como **--with-dlz-ldap=yes**
 	1. wget https://downloads.isc.org/isc/bind9/9.16.13/bind-9.16.13.tar.xz
 	2. tar -xf bind-9.16.13.tar.xz
 	3. cd bind-9-16.13
