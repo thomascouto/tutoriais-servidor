@@ -4,14 +4,14 @@
 > 1.	apt install sudo (root)
 > 2.	usermod -aG sudo <usuário>
 > 3.	Executar 'visudo' e verificar a existencia da linha:
-> Allow members of group sudo to execute any command
 > %sudo   ALL=(ALL:ALL) ALL
 > 4.	Reboot
 
->>> Configuração IP estático:
-1.	/etc/network/interfaces e comentar "# The primary network interface"
-2.	Criar o arquivo referente a interface em "/etc/network/interfaces.d/<nome da eth>":
-# The primary network interface (AJUSTAR CONFORME NECESSÁRIO)
+## Configuração IP estático:
+> 1.	/etc/network/interfaces e comentar "# The primary network interface"
+> 2.	Criar o arquivo referente a interface em "/etc/network/interfaces.d/<nome da eth>":
+
+\# The primary network interface (AJUSTAR CONFORME NECESSÁRIO)
 allow-hotplug enp0s3
 iface enp0s3 inet static
 address 192.168.0.62/26
