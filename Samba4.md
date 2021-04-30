@@ -1,6 +1,4 @@
-Configuração Debian 10 Buster (Instalação limpa) – Samba ADDC + Bind9_DLZ
-
-
+# Configuração Debian 10 Buster (Instalação limpa) – Samba ADDC + Bind9_DLZ
 
 >>> Instalação SUDO:
 1.	apt install sudo (root)
