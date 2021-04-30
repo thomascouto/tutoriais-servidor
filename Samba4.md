@@ -1,4 +1,5 @@
 # Configuração Debian 10 Buster (Instalação limpa) – Samba ADDC + Bind9_DLZ
+### Por Thomas Couto - thomas@brasnet.org
 
 ## Instalação SUDO:
 > 1.	apt install sudo (root)
@@ -11,25 +12,26 @@
 > 1.	/etc/network/interfaces e comentar "# The primary network interface"
 > 2.	Criar o arquivo referente a interface em "/etc/network/interfaces.d/<nome da eth>":
 
-\# The primary network interface (AJUSTAR CONFORME NECESSÁRIO)
-allow-hotplug enp0s3
-iface enp0s3 inet static
-address 192.168.0.62/26
-gateway 192.168.0.1
-Outros comandos úteis:
-	- ifdown <nome eth> -> derruba a eth
-	- ifup <nome eth>   -> sobe a eth
-	- ip link show
-	- ip -s link show <nome eth>
-	- apt install ethtool (utilitário)
-	- ip neigh show
-	- ip -br address show
-	- traceroute google.com
-	- ip route show
-	- nslookup google.com
-	- ss -tunlp4
+\# The primary network interface (AJUSTAR CONFORME NECESSÁRIO):
+> allow-hotplug enp0s3
+> iface enp0s3 inet static
+> address 192.168.0.62/26
+> gateway 192.168.0.1
+
+\# Outros comandos úteis para debug:
+> ifdown <nome eth> (derruba a eth)
+> ifup <nome eth>   (sobe a eth)
+> ip link show
+> ip -s link show <nome eth>
+> apt install ethtool (utilitário)
+> ip neigh show
+> ip -br address show
+> traceroute google.com
+> ip route show
+> nslookup google.com
+> ss -tunlp4
 		
->>> Instalação das dependências do Samba:
+## Instalação das dependências do Samba:
 sudo apt install acl attr autoconf bind9utils bison build-essential debhelper /
 dnsutils docbook-xml docbook-xsl flex gdb libjansson-dev krb5-user libacl1-dev /
 libaio-dev libarchive-dev libattr1-dev libblkid-dev libbsd-dev libcap-dev libcups2-dev /
@@ -39,22 +41,23 @@ python-all-dev python-crypto python-dbg python-dev python-dnspython python3-dnsp
 python-gpg python3-gpg python-markdown python3-markdown python3-dev xsltproc zlib1g-dev /
 liblmdb-dev lmdb-utils libsystemd-dev libdbus-1-dev libtasn1-bin psmisc
 
->>> Modificar /etc/hosts para: (ajustar conforme necessário)
+\# Modificar /etc/hosts para: (ajustar conforme necessário)
 127.0.0.1       debian.CASA.INTRANET debian
 192.168.0.62    debian.CASA.INTRANET debian
 
->>> Remover o /etc/krb5.conf (rm)
->>> Download / Compilação Samba:
-- wget samba.org (https://download.samba.org/pub/samba/stable/)
-- tar -zxf samba-x.y.z.tar.gz
-- sudo ./configure --sysconfdir=/etc/samba/ --mandir=/usr/share/man/ --with-json
-- make -j 2
-- sudo make install
-- Editar .profile e acrescentar: PATH=/usr/local/samba/bin/:/usr/local/samba/sbin/:$PATH
-- Desabilitar o resolvconf:
-	sudo systemctl stop systemd-resolved
-	sudo systemctl disable systemd-resolved
-	sudo systemctl status systemd-resolved
+* Remover o /etc/krb5.conf (rm)
+
+## Download / Compilação Samba:
+> wget samba.org (https://download.samba.org/pub/samba/stable/)
+> tar -zxf samba-x.y.z.tar.gz
+> sudo ./configure --sysconfdir=/etc/samba/ --mandir=/usr/share/man/ --with-json
+> make -j 2
+> sudo make install
+> Editar .profile e acrescentar: PATH=/usr/local/samba/bin/:/usr/local/samba/sbin/:$PATH
+> \# Desabilitar o resolvconf:
+>>	1. sudo systemctl stop systemd-resolved
+>>	2. sudo systemctl disable systemd-resolved
+>>	3. sudo systemctl status systemd-resolved
 
 - Modificar o /etc/resolv.conf (ajustar):
 search CASA.INTRANET
