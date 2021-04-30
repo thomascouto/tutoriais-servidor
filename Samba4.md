@@ -115,9 +115,10 @@ https://wiki.samba.org/index.php/Libnss_winbind_Links
 [Install]
 	WantedBy=multi-user.target
 ```
-<br/>
-- systemctl daemon-reload
-- systemctl enable myservice.service
-- systemctl start myservice.service
+```
+systemctl daemon-reload
+systemctl enable samba.service
+systemctl start samba.service
+```
 
 
