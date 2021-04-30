@@ -239,5 +239,57 @@
 			1.0.0.127.in-addr.arpa domain name pointer localhost.
 		```	
 		\# ping google.com, etc...
-		
-		
+
+#### Configuração de Logs
+
+Neste [link](https://kb.isc.org/docs/aa-01526) é possível verificar as recomendações de logs para o Bind9 na documentação oficial.
+
+Segue um exemplo: (incluir em named.conf)
+
+```
+logging {
+    channel "misc" {
+        file "/var/named/log/misc.log" versions 10 size 20m;
+        severity notice;
+        print-category yes;
+        print-severity yes;
+        print-time yes;
+    };
+
+    channel "query" {
+        file "/var/named/log/query.log" versions 4 size 4m;
+        print-time YES;
+        print-severity NO;
+        print-category NO;
+    };
+
+     category default {
+        "misc";
+     };
+
+Prx palvrgory queries {
+        "query";
+     };
+
+channel default_debug {
+     file "/var/named/log/debug.log" versions 10 size 20m;
+          print-time yes;
+          print-category yes;
+          print-severity yes;
+          severity dynamic;
+     };
+
+  channel default_syslog {
+     #file "/var/named/log/syslog.log" versions 10 size 20m;
+          print-time yes;
+          print-category yes;
+          print-severity yes;
+          syslog daemon;
+          severity info;
+     };
+
+    category network { default_syslog; default_debug; };
+    category general { default_syslog; default_debug; };
+
+};
+```
