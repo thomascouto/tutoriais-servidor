@@ -9,5 +9,5 @@ Documentação oficial [Bacula](https://www.bacula.org/documentation/documentati
 Documentação oficial [Baculum](https://baculum.app/doc/index.html)<br/>
 
 
-🖥️ Críticas, sugestões, erros: **thomas@brasnet.org**
+>>> Críticas, sugestões, erros: **thomas@brasnet.org**
 
