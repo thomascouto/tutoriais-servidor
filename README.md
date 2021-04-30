@@ -1,7 +1,8 @@
 # **Tutoriais**
-## Críticas, sugestões, erros: **thomas@brasnet.org**
+### **thomas@brasnet.org**
 
-* Guias úteis para implantação de diversos serviços, utilizando o Debian Buster.
+* Guias implantação de diversos serviços, utilizando o Debian Buster.
+* Para comentários, utilizar o issues.
 
 >Documentação oficial [Samba](https://wiki.samba.org/index.php/Main_Page)<br/>
 >Documentação oficial [Bind9](https://kb.isc.org/docs/aa-01310)<br/>
