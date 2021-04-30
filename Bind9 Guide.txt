@@ -1,4 +1,4 @@
-Instalação / Configuração SAMBA 4.X + BIND9_DLZ - Debian 10 Buster
+# Instalação / Configuração SAMBA 4.X + BIND9_DLZ - Debian 10 Buster
 por Thomas (thomas@brasnet.org)
 
 ■ A instalação foi realizada assumindo uma máquina/vm "limpa", apenas o Debian 10 recém instalado.
