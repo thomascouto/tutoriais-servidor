@@ -17,7 +17,7 @@
 * **NOTA**: Ou então editar /etc/sudoers.d/<<username>>
 
 #### Download/Compilação do pacote BIND:
-* De acordo com o o [Wiki](wiki.samba.org/index.php/Using_BIND_DLZ_backend_with_secured_/_signed_DNS_updates) do Samba,
+* De acordo com o o [Wiki](http://wiki.samba.org/index.php/Using_BIND_DLZ_backend_with_secured_/_signed_DNS_updates) do Samba,
   a utilização do pacote BIND9 nativo do Debian causará problemas na atualização dos registros DNS, causando o erro:
   "update '<name of client>' denied. Tive o mesmo problema e isso me motivou a criar este guia. Este erro se dá pelo fato que o 
 	bind instalado por repositório não possui todas as opções necessárias para o correto funcionamento do samba.
