@@ -1,12 +1,12 @@
 # Configuração Debian 10 Buster (Instalação limpa) – Samba ADDC + Bind9_DLZ
 
->>> Instalação SUDO:
-1.	apt install sudo (root)
-2.	usermod -aG sudo <usuário>
-3.	Executar 'visudo' e verificar a existencia da linha:
-  # Allow members of group sudo to execute any command
-  %sudo   ALL=(ALL:ALL) ALL
-4.	Reboot
+## Instalação SUDO:
+> 1.	apt install sudo (root)
+> 2.	usermod -aG sudo <usuário>
+> 3.	Executar 'visudo' e verificar a existencia da linha:
+> Allow members of group sudo to execute any command
+> %sudo   ALL=(ALL:ALL) ALL
+> 4.	Reboot
 
 >>> Configuração IP estático:
 1.	/etc/network/interfaces e comentar "# The primary network interface"
